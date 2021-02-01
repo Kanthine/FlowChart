@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-02-01T03:24:12.426Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36" etag="Z0S0RUehXYceBQWGPjng" version="14.2.7" type="github">
+<mxfile host="app.diagrams.net" modified="2021-02-01T05:43:58.879Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36" etag="Fx53TccCqlspPQdecfjx" version="14.2.7" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="1773" dy="1678" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -144,19 +144,72 @@
         <mxCell id="Ba62rFfbgt_jGUZCIcvL-7" value="&lt;p class=&quot;p1&quot; style=&quot;margin: 0px ; font-stretch: normal ; font-size: 10px ; line-height: normal ; font-family: &amp;#34;menlo&amp;#34; ; background-color: rgba(0 , 0 , 0 , 0)&quot;&gt;///&amp;nbsp;&lt;span class=&quot;s1&quot; style=&quot;background-color: rgba(0 , 0 , 0 , 0) ; font-stretch: normal ; line-height: normal ; font-family: &amp;#34;pingfang sc&amp;#34;&quot;&gt;参数&lt;/span&gt;&lt;span style=&quot;background-color: rgba(0 , 0 , 0 , 0) ; font-family: &amp;#34;menlo&amp;#34;&quot;&gt;&amp;nbsp;executeRouteBlock&amp;nbsp;&lt;/span&gt;&lt;span class=&quot;s1&quot; style=&quot;background-color: rgba(0 , 0 , 0 , 0) ; font-stretch: normal ; line-height: normal ; font-family: &amp;#34;pingfang sc&amp;#34;&quot;&gt;表示是否执行&lt;/span&gt;&lt;span style=&quot;background-color: rgba(0 , 0 , 0 , 0) ; font-family: &amp;#34;menlo&amp;#34;&quot;&gt;&amp;nbsp;handlerBlock&lt;/span&gt;&lt;/p&gt;&lt;p class=&quot;p1&quot; style=&quot;margin: 0px ; font-stretch: normal ; font-size: 10px ; line-height: normal ; font-family: &amp;#34;menlo&amp;#34; ; background-color: rgba(0 , 0 , 0 , 0)&quot;&gt;- (BOOL)_routeURL:(NSURL&amp;nbsp;*)URL&amp;nbsp;withParameters:(NSDictionary&amp;nbsp;*)parameters&amp;nbsp;executeRouteBlock:(BOOL)executeRouteBlock;&lt;/p&gt;" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;startSize=30;strokeColor=#6c8ebf;fillColor=#dae8fc;fontSize=14;fontColor=#000000;align=left;spacingLeft=10;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="2360" y="530" width="650" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="Ba62rFfbgt_jGUZCIcvL-8" value="JLRRouteDefinition 实例" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;strokeColor=#6c8ebf;fillColor=#dae8fc;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="4070" y="949" width="500" height="210" as="geometry">
+        <mxCell id="Ba62rFfbgt_jGUZCIcvL-8" value="objc-runtime-new.mm 文件" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;strokeColor=#6c8ebf;fillColor=#dae8fc;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="3670" y="890" width="580" height="220" as="geometry">
             <mxRectangle x="500" y="280" width="160" height="26" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="Ba62rFfbgt_jGUZCIcvL-9" value="判断该路由规则是否匹配 URL 请求&#xa;&#xa;" style="text;strokeColor=#82b366;fillColor=#d5e8d4;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=14;align=center;" vertex="1" parent="Ba62rFfbgt_jGUZCIcvL-8">
+        <mxCell id="Ba62rFfbgt_jGUZCIcvL-9" value="一些初始化操作的 _read_images() 函数&#xa;" style="text;strokeColor=#82b366;fillColor=#d5e8d4;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=14;align=center;" vertex="1" parent="Ba62rFfbgt_jGUZCIcvL-8">
+          <mxGeometry y="26" width="580" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="Ba62rFfbgt_jGUZCIcvL-11" value="/// 注意：由于_read_images() 函数中完成了大量的初始化操作，我们在此处省略大量无关代码，&#xa;void _read_images(header_info **hList, uint32_t hCount, int totalClasses, int unoptimizedTotalClasses){&#xa;        //禁用NSNumber等的 Tagged Pointer 指针优化&#xa;        if (DisableTaggedPointers) {&#xa;            disableTaggedPointers();&#xa;        }&#xa;        &#xa;        //初始化 TaggedPointer 混淆器：用于保护 Tagged Pointer 上的数据&#xa;        initializeTaggedPointerObfuscator();&#xa;}" style="text;strokeColor=#d79b00;fillColor=#ffe6cc;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" vertex="1" parent="Ba62rFfbgt_jGUZCIcvL-8">
+          <mxGeometry y="50" width="580" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="Ba62rFfbgt_jGUZCIcvL-12" value="objc-runtime-new.mm 文件" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;strokeColor=#6c8ebf;fillColor=#dae8fc;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="4810" y="3020" width="500" height="210" as="geometry">
+            <mxRectangle x="500" y="280" width="160" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ba62rFfbgt_jGUZCIcvL-13" value="一些初始化操作的 _read_images() 函数&#xa;" style="text;strokeColor=#82b366;fillColor=#d5e8d4;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=14;align=center;" vertex="1" parent="Ba62rFfbgt_jGUZCIcvL-12">
           <mxGeometry y="26" width="500" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="Ba62rFfbgt_jGUZCIcvL-10" value="注意：注册路由模型时，路径组件仅仅使用 \ 分割；&#xa;而请求 request 的路径组件使用 NSURLComponents 处理的附加的参数！！&#xa;所以，注册路由时的 URL 一定不能包含参数，否则永远不可能匹配到有效响应" style="text;strokeColor=#B20000;fillColor=#e51400;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=14;align=center;fontColor=#ffffff;" vertex="1" parent="Ba62rFfbgt_jGUZCIcvL-8">
+        <mxCell id="Ba62rFfbgt_jGUZCIcvL-14" value="注意：注册路由模型时，路径组件仅仅使用 \ 分割；&#xa;而请求 request 的路径组件使用 NSURLComponents 处理的附加的参数！！&#xa;所以，注册路由时的 URL 一定不能包含参数，否则永远不可能匹配到有效响应" style="text;strokeColor=#B20000;fillColor=#e51400;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=14;align=center;fontColor=#ffffff;" vertex="1" parent="Ba62rFfbgt_jGUZCIcvL-12">
           <mxGeometry y="50" width="500" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="Ba62rFfbgt_jGUZCIcvL-11" value="- (JLRRouteResponse *)routeResponseForRequest:(JLRRouteRequest *)request{&#xa;      1、BOOL patternContainsWildcard = 是否包含通配符 &#39;*&#39;&#xa;      2、不包含通配符，路径组件的数量又不一样，返回一个无效的响应&#xa;      3、路径组件 request.pathComponents 与 RouteDefinition.patternPathComponents &#xa;             相对位置的路径不一致，则返回一个无效响应&#xa;}" style="text;strokeColor=#d79b00;fillColor=#ffe6cc;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" vertex="1" parent="Ba62rFfbgt_jGUZCIcvL-8">
+        <mxCell id="Ba62rFfbgt_jGUZCIcvL-15" value="是否禁用 TaggedPointers 技术&#xa; DisableTaggedPointers" style="text;strokeColor=#d79b00;fillColor=#ffe6cc;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" vertex="1" parent="Ba62rFfbgt_jGUZCIcvL-12">
           <mxGeometry y="110" width="500" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="Ba62rFfbgt_jGUZCIcvL-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="Ba62rFfbgt_jGUZCIcvL-16" target="Ba62rFfbgt_jGUZCIcvL-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ba62rFfbgt_jGUZCIcvL-22" value="YES&lt;br&gt;禁用" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="Ba62rFfbgt_jGUZCIcvL-21">
+          <mxGeometry x="-0.24" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ba62rFfbgt_jGUZCIcvL-16" value="&lt;span style=&quot;text-align: left&quot;&gt;是否禁用&amp;nbsp;TaggedPointers 技术&lt;/span&gt;&lt;br style=&quot;padding: 0px ; margin: 0px ; text-align: left&quot;&gt;&lt;span style=&quot;text-align: left&quot;&gt;&amp;nbsp;DisableTaggedPointers&lt;/span&gt;" style="rhombus;whiteSpace=wrap;html=1;startSize=30;strokeColor=#6c8ebf;fillColor=#dae8fc;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="4760" y="810" width="270" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="Ba62rFfbgt_jGUZCIcvL-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="Ba62rFfbgt_jGUZCIcvL-11" target="Ba62rFfbgt_jGUZCIcvL-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ba62rFfbgt_jGUZCIcvL-18" value="objc-runtime-new.mm 文件" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;strokeColor=#6c8ebf;fillColor=#dae8fc;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="5180" y="735" width="580" height="240" as="geometry">
+            <mxRectangle x="500" y="280" width="160" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ba62rFfbgt_jGUZCIcvL-19" value="static void disableTaggedPointers()函数 （禁用 Tagged Pointer 指针）&#xa; " style="text;strokeColor=#82b366;fillColor=#d5e8d4;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=14;align=center;" vertex="1" parent="Ba62rFfbgt_jGUZCIcvL-18">
+          <mxGeometry y="26" width="580" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="Ba62rFfbgt_jGUZCIcvL-20" value="static void disableTaggedPointers(){&#xa;    objc_debug_taggedpointer_mask = 0;//Tagged Pointer 能否使用&#xa;    objc_debug_taggedpointer_slot_shift = 0;&#xa;    objc_debug_taggedpointer_slot_mask = 0;&#xa;    objc_debug_taggedpointer_payload_lshift = 0;&#xa;    objc_debug_taggedpointer_payload_rshift = 0;&#xa;    &#xa;    objc_debug_taggedpointer_ext_mask = 0;&#xa;    objc_debug_taggedpointer_ext_slot_shift = 0;&#xa;    objc_debug_taggedpointer_ext_slot_mask = 0;&#xa;    objc_debug_taggedpointer_ext_payload_lshift = 0;&#xa;    objc_debug_taggedpointer_ext_payload_rshift = 0;&#xa;}" style="text;strokeColor=#d79b00;fillColor=#ffe6cc;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" vertex="1" parent="Ba62rFfbgt_jGUZCIcvL-18">
+          <mxGeometry y="50" width="580" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="Ba62rFfbgt_jGUZCIcvL-23" value="objc-runtime-new.mm 文件" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;strokeColor=#6c8ebf;fillColor=#dae8fc;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="4540" y="1070" width="750" height="340" as="geometry">
+            <mxRectangle x="500" y="280" width="160" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ba62rFfbgt_jGUZCIcvL-24" value="static void initializeTaggedPointerObfuscator()函数 （Tagged Pointer 指针上的数据加密）&#xa; " style="text;strokeColor=#82b366;fillColor=#d5e8d4;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=14;align=center;" vertex="1" parent="Ba62rFfbgt_jGUZCIcvL-23">
+          <mxGeometry y="26" width="750" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="Ba62rFfbgt_jGUZCIcvL-27" value="注释：随机初始化 TaggedPointer 混淆器 objc_debug_taggedpointer_obfuscator&#xa;           用于数据保护：混淆器 objc_debug_taggedpointer_obfuscator 在首次使用时充满随机性；&#xa;           在设置或检索 TaggedPointer 上的净负荷值时，混淆器与标记指针进行异或，因此该指针被加密；&#xa;          此时，别人无法通过指针获取 TaggedPointer 上存储的值，有效的进行了数据保护；&#xa;          如果程序的环境变量 OBJC_DISABLE_TAG_OBFUSCATION 设置为 YES ，则禁止使用 TaggedPointer 混淆器" style="text;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=14;align=left;strokeColor=#001DBC;fontColor=#ffffff;fillColor=#E5B3EF;" vertex="1" parent="Ba62rFfbgt_jGUZCIcvL-23">
+          <mxGeometry y="50" width="750" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="Ba62rFfbgt_jGUZCIcvL-25" value="&#xa;static void initializeTaggedPointerObfuscator(void){&#xa;    if (sdkIsOlderThan(10_14, 12_0, 12_0, 5_0, 3_0) || DisableTaggedPointerObfuscation) {&#xa;        // 对于链接到旧sdk的应用程序，如果它们依赖于tagged pointer表示，将混淆器设置为0，&#xa;        objc_debug_taggedpointer_obfuscator = 0;&#xa;    } else {&#xa;        // 将随机数据放入变量中，然后移走所有非净负荷位&#xa;        arc4random_buf(&amp;objc_debug_taggedpointer_obfuscator,sizeof(objc_debug_taggedpointer_obfuscator));&#xa;        objc_debug_taggedpointer_obfuscator &amp;= ~_OBJC_TAG_MASK;&#xa;    }&#xa;}" style="text;strokeColor=#d79b00;fillColor=#ffe6cc;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" vertex="1" parent="Ba62rFfbgt_jGUZCIcvL-23">
+          <mxGeometry y="170" width="750" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="Ba62rFfbgt_jGUZCIcvL-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="Ba62rFfbgt_jGUZCIcvL-11" target="Ba62rFfbgt_jGUZCIcvL-23">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
